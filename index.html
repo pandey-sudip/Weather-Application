@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application Javascript</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Weather Application</h1>
+            <div class="Input">
+                <input type="text" name="cityName" id="cityName" placeholder="Enter City Name" autocomplete="off" value="New York">
+                <button onclick="getWeather();">Get Weather</button>
+            </div>
+            <div class="data">
+                <div class="result">
+                    <h2 id="NameOfCity"></h2>
+                    <h2 id="Temp"></h2>
+                    <h2 id="WeatherCondition"></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let CityName = document.getElementById('cityName');
+    function getWeather() {
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=' + CityName.value + '&appid=a8581231e03653ead315d886a484bc3e&units=metric')
+
+            .then(response => response.json().then(data => {
+                // console.log(data)
+                document.getElementById('NameOfCity').innerHTML="City Name: "+ data['name'];
+                document.getElementById('Temp').innerHTML="Temperature: "+ data['main']['temp'] + " °C";
+                document.getElementById('WeatherCondition').innerHTML="Weather: "+ data['weather'][0]['description'];
+            }))
+    }
+</script>
+
+</html>

@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.box{
+    text-align: center;
+    height: 50vh;
+    width: 30vw;
+    background: radial-gradient(rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.5));
+    border-radius: 8px;
+    box-shadow: 0 2px 4px #999;
+}
+.box h1{
+    margin: 15px;
+}
+.input{
+    margin: 20px;
+    display: flex;
+}
+input{
+    font-size: 18px;
+    padding: 15px;
+    outline: none;
+    border: 1px solid rgb(233, 217, 217);
+    background: rgba(255, 217, 217, 0.03);
+    color: white;
+    height: 35px;
+    width: 300px;
+    font-weight: 650;
+}
+::placeholder{
+    color: white;
+    font-weight: 650;
+}
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    background: rgb(233, 217, 217);
+    font-weight: 550;
+    height: 35px;
+    width: 100px;
+}
+.data{
+    height: 30vh;
+    width: 30vw;
+    background: radial-gradient(rgba(255, 255, 255, 0.5), rgba(29, 24, 24, 0.05));
+    transform: translateY(43px);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.data{
+    text-align: left;
+}
+.result{
+    transform: translateY(45px);
+    margin: 15px 15px;
+}
+.result h2{ 
+    margin: 15px;
+}
